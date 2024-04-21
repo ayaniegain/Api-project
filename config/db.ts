@@ -12,12 +12,12 @@ const connectDB=async ()=>{
         })
         
         mongoose.connection.on('error',(err)=>{
-            console.log("Error in  to database connection",err)
+            console.log(colors.red("Error in  to database connection"),err)
         })
         await mongoose.connect(config.databaseURL as string);
         
     } catch (error) {
-        console.log("failed to connect to database",error);
+        console.log(colors.red("failed to connect to database"),error);
         process.exit(1)
         
     }
