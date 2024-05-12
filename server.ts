@@ -1,7 +1,7 @@
-import { config } from "./config/config";
+import { config } from "./src/config/config";
 import app from "./src/app";
 import colors from "colors";
-import connect from "./config/db"
+import connect from "./src/config/db"
 
 
 async function serverUp() {
